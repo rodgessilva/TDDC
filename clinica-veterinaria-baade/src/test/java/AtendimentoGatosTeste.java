@@ -15,7 +15,7 @@ public void um_cliente_com_nome_que_tem_dois_animais_de_nomes_e(String arg1, Str
     // Write code here that turns the phrase above into concrete actions
 
 }
-
+ 
 @Given("^um servico de \"([^\"]*)\"$")
 public void um_servico_de(String arg1) throws Throwable {
     // Write code here that turns the phrase above into concrete actions

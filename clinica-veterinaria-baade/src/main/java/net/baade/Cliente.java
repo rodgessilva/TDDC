@@ -20,5 +20,5 @@ public class Cliente {
 	public void setNomecliente(String nomecliente) {
 		Nomecliente = nomecliente;
 	}
-	
+	  
 }

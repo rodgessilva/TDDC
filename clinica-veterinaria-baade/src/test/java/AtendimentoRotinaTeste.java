@@ -24,7 +24,7 @@ public void um_cliente_com_nome_que_tem_um_animal_de_nome(String cliente, String
 public void um_servico_de_que_custa(String arg1, String arg2) throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	
-    throw new PendingException();
+    throw new PendingException(); 
 }
 
 @Given("^um outro servico de \"([^\"]*)\" que custa \"([^\"]*)\"$")

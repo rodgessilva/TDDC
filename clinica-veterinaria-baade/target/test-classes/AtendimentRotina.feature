@@ -9,4 +9,4 @@ Feature: Atendimento Rotina
 	Then o recibo deve ter 2 servicos
 		And o servico 1 deve ser "consulta de rotina"
 		And o servico 2 deve ser "vacinacao contra raiva"
-		And o valor total do recibo deve ser "30.22"
+		And o valor  total do recibo deve ser "30.22"

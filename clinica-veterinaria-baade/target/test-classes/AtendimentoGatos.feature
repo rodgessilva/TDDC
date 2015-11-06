@@ -15,4 +15,4 @@ Feature: Atendimento Gatos
 		And o servico 2 deve ser "Castração"
 		And o servico 1 deve ser "Esterelização"
 		And o servico 2 deve ser "Esterelização"
-	
+	 
