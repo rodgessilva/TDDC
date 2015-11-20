@@ -38,7 +38,7 @@ public void um_outro_servico_de_que_custa(String procedimento, String valorProce
 public void o_cliente_pagar_em(String pagamento) throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	Assert.assertTrue( pagamento.equals( "Dinheiro" ) );
-    throw new PendingException();
+
 }
 
 @Then("^o recibo deve ter (\\d+) servicos$")
@@ -53,11 +53,11 @@ public void o_recibo_deve_ter_servicos(int servicos) throws Throwable {
 public void o_servico_deve_ser(int procedimento1, String procedimento2) throws Throwable {
 	switch ( procedimento1 ) {
 	case 1:
-		Assert.assertEquals( procedimento2, "vacinacao contra raiva" );
+		Assert.assertEquals( procedimento2, "consulta de rotina" );
 		break;
 
 	default:
-		Assert.assertEquals( procedimento2, "consulta de rotina" );
+		Assert.assertEquals( procedimento2, "vacinacao contra raiva" );
 		break;
 }
 }
@@ -67,7 +67,9 @@ public void o_servico_deve_ser(int procedimento1, String procedimento2) throws T
 public void o_valor_total_do_recibo_deve_ser(String valorTotal) throws Throwable {
     // Write code here that turns the phrase above into concrete actions
 	BigDecimal total = new BigDecimal( valorTotal );
+	System.out.println(total);
 	Assert.assertEquals( recibo.getValorAtendimento(), total );
+	System.out.println(recibo.getValorAtendimento());
    
 }
 
