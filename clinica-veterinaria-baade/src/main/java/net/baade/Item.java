@@ -1,8 +1,10 @@
 package net.baade;
 
-import lombok.Data;
+import java.math.BigDecimal;
 
 public class Item {
+	private String descricao;
+	private BigDecimal valor;
 	public String getDescricao() {
 		return descricao;
 	} 
@@ -11,20 +13,19 @@ public class Item {
 		this.descricao = descricao;
 	}
 
-	public Float getValor() {
+	public BigDecimal getValor() {
 		return valor;
 	}
 
-	public void setValor(Float valor) {
+	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
 
-	public Item(String descricao, Float valor) {
+	public Item(String descricao, BigDecimal valor) {
 		this.descricao = descricao;
 		this.valor = valor;
 	}
 
-	private String descricao;
-	private Float valor;
+
 
 }

@@ -1,16 +1,14 @@
 package net.baade;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
 
 
 public class Recibo {
 	private String nomeCliente;
 	private String nomeAnimal;
+	
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -27,12 +25,12 @@ public class Recibo {
 		this.nomeAnimal = nomeAnimal;
 	}
 
-	public Float getValorAtendimento() {
-		return valorAtendimento;
+	public BigDecimal getValorAtendimento() {
+		return valorProcedimento;
 	}
 
-	public void setValorAtendimento(Float valorAtendimento) {
-		this.valorAtendimento = valorAtendimento;
+	public void setValorAtendimento(BigDecimal valorProcedimento) {
+		this.valorProcedimento = valorProcedimento;
 	}
 
 	public List<Item> getItens() {
@@ -43,8 +41,8 @@ public class Recibo {
 		this.itens = itens;
 	}
 
-	private Float valorAtendimento = new Float( 0 );
-	@Setter( AccessLevel.PRIVATE )
+	private BigDecimal valorProcedimento = new BigDecimal( 0 );
+
 	private List<Item> itens;
 
 	public void listaItemAdd( Item item ) {
@@ -52,6 +50,6 @@ public class Recibo {
 			itens = new ArrayList<Item>();
 		}
 		itens.add( item );
-		this.valorAtendimento += item.getValor();
+		this.valorProcedimento = this.valorProcedimento.add( item.getValor() );
 	}
 }
